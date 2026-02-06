@@ -3,36 +3,29 @@ import './app.css'
 
 
 const App = () => {
-  const [data,setData] = useState([])
+  const [data, setData] = useState([])
 
-  useEffect(()=>{
-  fetch("https://dummyjson.com/products")
-  .then((res)=>res.json())
-  .then((data)=> setData(data.products))
-},[])
-  
+  useEffect(() => {
+    fetch("https://dummyjson.com/products")
+      .then((res) => res.json())
+      .then((data) => setData(data.products))
+  }, [])
+
   return (
     <div>
-      <div className="title">
-      <h1>mahsulotlar</h1>
-      </div>
-      {data.map((item,index)=>
-      <div className="container" key={index}> 
-      <div className="carts">
-        <div className="card">
-      <img  src={item.images[0]} alt={item.title} />
-      <h4>{item.title}</h4>
-      <p>{item.discription}</p>
-      <mark>{item.price}</mark>
-      <p>{item.rating}</p>
-      {item.tags.map((element)=>
-      <b>#{element}</b>
-      )}
+        <h1>mahsulotlar</h1>
+        <div className="container">
+          {data.map((item,index)=>{
+            return(
+              <div key={index} class="card">
+                <img src={item.images[0]} alt="" />
+                <h1>{item.title}</h1>
+                <p>{item.description}</p>
+              </div>
+            )
+          })}
         </div>
-        
-      </div>
-      </div>
-      )}
+     
     </div>
   );
 }
