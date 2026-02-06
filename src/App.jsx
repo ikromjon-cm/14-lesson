@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       {data.map((item,index)=>
-      <div className="container" key={item.id}> 
+      <div className="container" key={index}> 
       <img src={item.images[0]} alt={item.title} />
       <h4>{item.title}</h4>
       <p>{item.discription}</p>
