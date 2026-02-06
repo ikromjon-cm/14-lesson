@@ -17,7 +17,7 @@ const App = () => {
       <img src={item.images[0]} alt={item.title} />
       <h4>{item.title}</h4>
       <p>{item.discription}</p>
-      
+      <mark>{item.price}</mark>
       </div>
       )}
     </div>
