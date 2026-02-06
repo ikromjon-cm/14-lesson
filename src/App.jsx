@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './app.css'
 
 
 const App = () => {
@@ -12,12 +13,21 @@ const App = () => {
   
   return (
     <div>
+      <div className="title">
+      <h1>mahsulotlar</h1>
+      </div>
       {data.map((item,index)=>
       <div className="container" key={index}> 
-      <img src={item.images[0]} alt={item.title} />
+      <div className="carts">
+        <div className="card">
+      <img  src={item.images[0]} alt={item.title} />
       <h4>{item.title}</h4>
       <p>{item.discription}</p>
       <mark>{item.price}</mark>
+      <p>{item.rating}</p>
+        </div>
+        
+      </div>
       </div>
       )}
     </div>
