@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <div>
-        <h1>mahsulotlar</h1>
+        <h1 className="title">mahsulotlar</h1>
         <div className="container">
           {data.map((item,index)=>{
             return(
@@ -21,6 +21,11 @@ const App = () => {
                 <img src={item.images[0]} alt="" />
                 <h1>{item.title}</h1>
                 <p>{item.description}</p>
+                <b>{item.price}</b>
+               {item.tags.map((element)=>
+                <mark>#{element}</mark>              
+              )}
+              <button>add to card</button>
               </div>
             )
           })}

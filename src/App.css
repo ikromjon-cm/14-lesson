@@ -9,6 +9,16 @@
   text-align: center;
   margin-bottom: 150px;
 }
+.card{
+  width: 350px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgb(70, 155, 241);
+  border-radius: 10px;
+}
 img{
   width: 250px;
   height: 200px;
@@ -19,4 +29,12 @@ img{
   gap: 20px;
   padding: 10px 100px;
   margin: 0 auto;
+}
+button{
+  width: 150px;
+  height: 25px;
+  background-color: orange;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
 }
