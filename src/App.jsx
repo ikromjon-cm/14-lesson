@@ -25,6 +25,9 @@ const App = () => {
       <p>{item.discription}</p>
       <mark>{item.price}</mark>
       <p>{item.rating}</p>
+      {item.tags.map((element)=>
+      <b>#{element}</b>
+      )}
         </div>
         
       </div>
